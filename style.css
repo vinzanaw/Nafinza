@@ -360,7 +360,7 @@ padding: 12px;
     .nav-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
-.nav-toggle.active .bar:nth-child(1) {
+    .nav-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
@@ -384,7 +384,7 @@ padding: 12px;
     .skill-tags {
         justify-content: center;
     }
-.projects-grid {
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
