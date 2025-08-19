@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -49,7 +50,7 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     
     // Get form data
     const formData = new FormData(this);
-const name = this.querySelector('input[type="text"]').value;
+    const name = this.querySelector('input[type="text"]').value;
     const email = this.querySelector('input[type="email"]').value;
     const message = this.querySelector('textarea').value;
     
@@ -65,7 +66,8 @@ const name = this.querySelector('input[type="text"]').value;
         alert('Mohon masukkan email yang valid!');
         return;
     }
-// Simulate form submission
+    
+    // Simulate form submission
     alert('Terima kasih! Pesan Anda telah terkirim.');
     this.reset();
 });
@@ -88,7 +90,8 @@ const observer = new IntersectionObserver(function(entries) {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
     const animateElements = document.querySelectorAll('.project-card, .contact-item, .about-text');
-animateElements.forEach(el => {
+    
+    animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -109,6 +112,8 @@ function typeWriter(element, text, speed = 100) {
         }
     }
     type();
+}
+
 // Initialize typing effect when page loads
 window.addEventListener('load', function() {
     const heroTitle = document.querySelector('.hero-title');
@@ -134,6 +139,7 @@ document.querySelectorAll('.skill-tag').forEach((tag, index) => {
     tag.style.animationDelay = '${index * 0.1}s';
     tag.style.animation = 'fadeInUp 0.6s ease both';
 });
+
 // Add active class to current nav item based on scroll position
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
@@ -180,4 +186,3 @@ window.addEventListener('scroll', function() {
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 });
-}
